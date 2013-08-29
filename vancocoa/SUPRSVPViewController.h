@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SUPFormContainer.h"
 
-@interface SUPRSVPViewController : UIViewController
+@interface SUPRSVPViewController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic) IBOutlet UITextField *emailTextField;
+@property (nonatomic) IBOutlet UITextField *nameTextField;
+@property (nonatomic) IBOutlet UIButton *subscribeButton;
+@property (nonatomic) IBOutlet UILabel *doneLabel;
+
+@property (nonatomic) SUPFormContainer *formContainer;
+
+-(IBAction)subscribe:(id)sender;
+-(IBAction)nextField:(id)sender;
 
 @end

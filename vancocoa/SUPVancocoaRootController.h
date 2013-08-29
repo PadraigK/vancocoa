@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SUPAttendeesViewController.h"
+#import "SUPVancocoaEventParser.h"
 
 @interface SUPVancocoaRootController : UITabBarController <UITabBarControllerDelegate>
 
+@property (nonatomic) SUPVancocoaEventParser *parser;
 
 @end

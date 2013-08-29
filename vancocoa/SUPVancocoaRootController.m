@@ -9,9 +9,15 @@
 #import "SUPVancocoaRootController.h"
 #import "AFNetworking.h"
 #import "SUPVancocoaEventSerializer.h"
-#import "SUPVancocoaEventParser.h"
+#import "SUPEventViewController.h"
+#import "SUPRSVPViewController.h"
+#import "SUPSpeaker.h"
 
 @interface SUPVancocoaRootController ()
+
+- (SUPAttendeesViewController *)attendeesViewController;
+- (SUPEventViewController *)eventViewController;
+- (SUPRSVPViewController *)rsvpViewController;
 
 @end
 
@@ -37,7 +43,24 @@ client.responseSerializer = [SUPVancocoaEventSerializer serializer];
 
 [client GET:@"events/1" parameters:nil success:^(NSHTTPURLResponse *response, SUPVancocoaEventParser *eventParser) {
     
-    [self attendeesViewController].attendees = eventParser.attendees;
+    self.parser = eventParser;
+    
+    self.attendeesViewController.attendees = eventParser.attendees;
+    
+    self.eventViewController.dateLabel.text = eventParser.dateString;
+    self.eventViewController.eventSummaryLabel.text = eventParser.eventSummary;
+    
+    __block NSString *talksText = @"";
+    
+    [eventParser.talks enumerateObjectsUsingBlock:^(SUPSpeaker *talk, NSUInteger idx, BOOL *stop) {
+        talksText = [NSString stringWithFormat:@"%@\n%u. %@\n", talksText,idx+1, talk];
+    }];
+    
+    self.eventViewController.speakersLabel.text =talksText;
+    
+    self.rsvpViewController.formContainer = eventParser.rsvpFormDetails;
+
+    
 } failure:^(NSError *error) {
     NSLog(@"Error getting event HTML: %@", error);
 }];
@@ -51,19 +74,33 @@ client.responseSerializer = [SUPVancocoaEventSerializer serializer];
 
 - (SUPAttendeesViewController *)attendeesViewController
 {
+    return (SUPAttendeesViewController *)[self viewControllerTitled:@"Attendees"];
+}
+
+- (SUPEventViewController *)eventViewController
+{
+    return (SUPEventViewController *)[self viewControllerTitled:@"Event"];
+}
+
+- (SUPRSVPViewController *)rsvpViewController
+{
+    return (SUPRSVPViewController *)[self viewControllerTitled:@"RSVP"];
+}
+
+- (UIViewController *)viewControllerTitled:(NSString *)title
+{
     __block UIViewController *viewController;
     
     [self.viewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
         viewController = (UIViewController *)obj;
         
-        if ([viewController.title isEqualToString:@"Attendees"]) {
+        if ([viewController.title isEqualToString:title]) {
             *stop = YES;
         }
     }];
     
-    return (SUPAttendeesViewController *)viewController;
+    return viewController;
 }
-
 
 @end

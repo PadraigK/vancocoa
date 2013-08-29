@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SUPFormContainer.h"
 
 @interface SUPVancocoaEventParser : NSObject
 
@@ -16,5 +17,6 @@
 - (NSString *)eventSummary;
 - (NSArray *)talks;
 - (NSArray *)attendees;
+- (SUPFormContainer *)rsvpFormDetails;
 
 @end

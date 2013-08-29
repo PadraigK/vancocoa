@@ -45,6 +45,7 @@
 		1ABC0CA617C9753E00978152 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC0C8517C9753E00978152 /* UIKit.framework */; };
 		1ABC0CAE17C9753E00978152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0CAC17C9753E00978152 /* InfoPlist.strings */; };
 		1ABC0CB017C9753E00978152 /* vancocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC0CAF17C9753E00978152 /* vancocoaTests.m */; };
+		1AEE4ED517CFF05A0028BD51 /* SUPFormContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE4ED417CFF05A0028BD51 /* SUPFormContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		1ABC0CAB17C9753E00978152 /* vancocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vancocoaTests-Info.plist"; sourceTree = "<group>"; };
 		1ABC0CAD17C9753E00978152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1ABC0CAF17C9753E00978152 /* vancocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vancocoaTests.m; sourceTree = "<group>"; };
+		1AEE4ED317CFF05A0028BD51 /* SUPFormContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUPFormContainer.h; sourceTree = "<group>"; };
+		1AEE4ED417CFF05A0028BD51 /* SUPFormContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUPFormContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				1AA93D1E17C9CC2B007D0981 /* SUPAttendee.m */,
 				1AA93D2317C9D543007D0981 /* SUPSpeaker.h */,
 				1AA93D2417C9D543007D0981 /* SUPSpeaker.m */,
+				1AEE4ED317CFF05A0028BD51 /* SUPFormContainer.h */,
+				1AEE4ED417CFF05A0028BD51 /* SUPFormContainer.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 			files = (
 				1A6C3E9517C97BBC0029B53B /* AFImageRequestOperation.m in Sources */,
 				1A6C3E9917C97BBC0029B53B /* AFSerialization.m in Sources */,
+				1AEE4ED517CFF05A0028BD51 /* SUPFormContainer.m in Sources */,
 				1A6C3E9217C97BBC0029B53B /* AFHTTPClient+Rocket.m in Sources */,
 				1AA93D1C17C9CB93007D0981 /* SUPVancocoaEventParser.m in Sources */,
 				1AA93D1F17C9CC2B007D0981 /* SUPAttendee.m in Sources */,

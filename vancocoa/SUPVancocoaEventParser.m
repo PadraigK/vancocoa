@@ -10,6 +10,7 @@
 #import "HTMLParser.h"
 #import "SUPSpeaker.h"
 #import "SUPAttendee.h"
+
 #import "NSString+Trim.h"
 
 @interface SUPVancocoaEventParser()
@@ -102,6 +103,37 @@
     }];
     
     return results;
+}
+
+
+- (SUPFormContainer *)rsvpFormDetails
+{
+    NSArray *forms = [[self.parser body] findChildTags:@"form"];
+    
+    __block SUPFormContainer *formContainer = [[SUPFormContainer alloc] init];
+    
+    [forms enumerateObjectsUsingBlock:^(HTMLNode *form, NSUInteger idx, BOOL *stop) {
+        if ([[form getAttributeNamed:@"name"] isEqualToString:@"email-submission"]) {
+            formContainer.actionURL = [NSURL URLWithString:[form getAttributeNamed:@"action"]];
+
+            NSArray *inputElements = [form findChildTags:@"input"];
+            
+            [inputElements enumerateObjectsUsingBlock:^(HTMLNode *inputNode, NSUInteger idx, BOOL *stop) {
+                NSString *attributeName = [inputNode getAttributeNamed:@"name"];
+                NSString *attributeValue = [inputNode getAttributeNamed:@"value"];
+                
+                if (!attributeValue) {
+                    attributeValue = @"";
+                }
+                
+                if (attributeName) {
+                    [formContainer.fields setObject:attributeValue forKey:attributeName];
+                }
+            }];
+        }
+    }];
+    
+    return formContainer;
 }
 
 @end

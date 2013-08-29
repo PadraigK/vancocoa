@@ -16,21 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="Event" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-ve-WU7">
-                                <rect key="frame" x="20" y="158" width="280" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vancocoa-logo" translatesAutoresizingMaskIntoConstraints="NO" id="tf3-yc-Hjs">
+                                <rect key="frame" x="100" y="30" width="120" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ja1-PX-mDG"/>
+                                    <constraint firstAttribute="height" constant="50" id="vKs-kV-S3w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="jyI-xC-EK3">
+                                <rect key="frame" x="20" y="139" width="280" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29th August 2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-Zf-JaW">
+                                <rect key="frame" x="105" y="76" width="110" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speakers" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-BG-D2C">
+                                <rect key="frame" x="20" y="172" width="280" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9960784912109375" green="1" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Zhg-ve-WU7" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="20" symbolic="YES" id="JQj-gp-vk2"/>
-                            <constraint firstAttribute="trailing" secondItem="Zhg-ve-WU7" secondAttribute="trailing" constant="20" symbolic="YES" id="eHs-J5-0HT"/>
+                            <constraint firstItem="jyI-xC-EK3" firstAttribute="top" secondItem="FfR-Zf-JaW" secondAttribute="bottom" constant="41" id="8CW-ka-FF9"/>
+                            <constraint firstAttribute="trailing" secondItem="jyI-xC-EK3" secondAttribute="trailing" constant="20" symbolic="YES" id="Axm-Xg-T7R"/>
+                            <constraint firstItem="jyI-xC-EK3" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="20" symbolic="YES" id="B98-f2-fMs"/>
+                            <constraint firstItem="jSn-BG-D2C" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" constant="20" symbolic="YES" id="Dfs-MT-aXD"/>
+                            <constraint firstAttribute="trailing" secondItem="jSn-BG-D2C" secondAttribute="trailing" constant="20" symbolic="YES" id="J9C-HE-46p"/>
+                            <constraint firstItem="jSn-BG-D2C" firstAttribute="top" secondItem="jyI-xC-EK3" secondAttribute="bottom" constant="8" symbolic="YES" id="QsM-NT-IbR"/>
+                            <constraint firstItem="tf3-yc-Hjs" firstAttribute="top" secondItem="lMv-bH-a6E" secondAttribute="bottom" constant="10" id="bsH-3R-1g5"/>
+                            <constraint firstAttribute="centerX" secondItem="tf3-yc-Hjs" secondAttribute="centerX" id="cL8-ZR-6kg"/>
+                            <constraint firstAttribute="centerX" secondItem="FfR-Zf-JaW" secondAttribute="centerX" id="o1F-JD-D4S"/>
+                            <constraint firstItem="FfR-Zf-JaW" firstAttribute="top" secondItem="tf3-yc-Hjs" secondAttribute="bottom" constant="-4" id="xK2-qs-eRq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Event" image="Info" id="u1e-5L-l1D"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="FfR-Zf-JaW" id="de1-25-W1y"/>
+                        <outlet property="eventSummaryLabel" destination="jyI-xC-EK3" id="siH-kJ-p0d"/>
+                        <outlet property="speakersLabel" destination="jSn-BG-D2C" id="5RQ-ZO-lZI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,21 +83,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" text="RSVP" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="29h-N2-YGT">
-                                <rect key="frame" x="20" y="158" width="280" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-fp-TNw">
+                                <rect key="frame" x="41" y="172" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="lYB-KF-X2Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QUy-BD-bpt" id="2Tn-Ow-P4b"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBW-Bl-Y2m">
+                                <rect key="frame" x="232" y="205" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UXw-2M-JUh"/>
+                                    <constraint firstAttribute="height" constant="30" id="qC7-Vj-SOy"/>
+                                </constraints>
+                                <state key="normal" title="RSVP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="subscribe:" destination="QUy-BD-bpt" eventType="touchUpInside" id="Ca7-QW-H0C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJI-aH-6Nl">
+                                <rect key="frame" x="45" y="105" width="44" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vancocoa-logo" translatesAutoresizingMaskIntoConstraints="NO" id="o3x-xO-XWH">
+                                <rect key="frame" x="100" y="30" width="120" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J6s-3p-ISq"/>
+                                    <constraint firstAttribute="width" constant="120" id="iQI-iW-JYO"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjC-gg-9qN">
+                                <rect key="frame" x="91" y="247" width="146" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="276-71-MWg">
+                                <rect key="frame" x="42" y="134" width="237" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="UzW-eZ-0Vc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="nextField:" destination="QUy-BD-bpt" eventType="editingDidEnd" id="XrR-9H-rP1"/>
+                                    <outlet property="delegate" destination="QUy-BD-bpt" id="tKr-un-2a2"/>
+                                </connections>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9960784912109375" green="1" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="29h-N2-YGT" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="20" symbolic="YES" id="4te-rk-9Fp"/>
-                            <constraint firstAttribute="trailing" secondItem="29h-N2-YGT" secondAttribute="trailing" constant="20" symbolic="YES" id="FIx-Zl-RBr"/>
+                            <constraint firstItem="lo5-fp-TNw" firstAttribute="trailing" secondItem="VBW-Bl-Y2m" secondAttribute="trailing" constant="6" id="09f-Od-GLW"/>
+                            <constraint firstItem="lo5-fp-TNw" firstAttribute="top" secondItem="276-71-MWg" secondAttribute="bottom" constant="8" id="0No-tV-agj"/>
+                            <constraint firstAttribute="centerX" secondItem="276-71-MWg" secondAttribute="centerX" id="ARR-kr-EBy"/>
+                            <constraint firstItem="o3x-xO-XWH" firstAttribute="top" secondItem="dub-5C-2Vx" secondAttribute="bottom" constant="10" id="Hju-8S-MCW"/>
+                            <constraint firstItem="lo5-fp-TNw" firstAttribute="top" secondItem="276-71-MWg" secondAttribute="bottom" constant="8" symbolic="YES" id="Lsy-p2-kH6"/>
+                            <constraint firstItem="276-71-MWg" firstAttribute="leading" secondItem="QJI-aH-6Nl" secondAttribute="leading" constant="-3" id="gbp-TK-3Va"/>
+                            <constraint firstItem="276-71-MWg" firstAttribute="top" secondItem="QJI-aH-6Nl" secondAttribute="bottom" constant="4" id="hF6-Z1-RlC"/>
+                            <constraint firstItem="VBW-Bl-Y2m" firstAttribute="top" secondItem="lo5-fp-TNw" secondAttribute="bottom" constant="3" id="mbO-EA-NsE"/>
+                            <constraint firstAttribute="centerX" secondItem="o3x-xO-XWH" secondAttribute="centerX" id="obh-1U-gi7"/>
+                            <constraint firstItem="QJI-aH-6Nl" firstAttribute="top" secondItem="o3x-xO-XWH" secondAttribute="bottom" constant="25" id="pz5-EJ-Sim"/>
+                            <constraint firstAttribute="centerX" secondItem="lo5-fp-TNw" secondAttribute="centerX" id="xO5-4I-Og6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="RSVP" image="Mail" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Subscribe" image="Mail" id="Z7h-1E-pvt"/>
+                    <connections>
+                        <outlet property="doneLabel" destination="ZjC-gg-9qN" id="SSr-nS-oNd"/>
+                        <outlet property="emailTextField" destination="lo5-fp-TNw" id="bW9-Qb-HBN"/>
+                        <outlet property="nameTextField" destination="276-71-MWg" id="QGf-lI-c25"/>
+                        <outlet property="subscribeButton" destination="VBW-Bl-Y2m" id="CTR-Fk-KCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +225,7 @@
         <image name="Contacts" width="25" height="25"/>
         <image name="Info" width="22" height="22"/>
         <image name="Mail" width="21" height="15"/>
+        <image name="vancocoa-logo" width="135" height="141"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

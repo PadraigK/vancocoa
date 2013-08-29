@@ -10,4 +10,8 @@
 
 @interface SUPEventViewController : UIViewController
 
+@property (nonatomic) IBOutlet  UILabel *dateLabel;
+@property (nonatomic) IBOutlet  UILabel *eventSummaryLabel;
+@property (nonatomic) IBOutlet  UILabel *speakersLabel;
+
 @end
